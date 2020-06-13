@@ -22,7 +22,8 @@
     "@vue/cli-plugin-vuex": "^4.4.0",
     "@vue/cli-service": "^4.4.0",
     "@vue/test-utils": "^1.0.3",
-    "vue-template-compiler": "^2.6.11",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "semantic-release": "^17.0.8",
+    "vue-template-compiler": "^2.6.11"
   }
 }
