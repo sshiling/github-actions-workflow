@@ -22,24 +22,24 @@ jobs:
           node-version: "12.x"
       - run: npm ci
       - run: npm run format:check
-      - run: npm test -- --coverage
+      - run: npm run test:unit -- --coverage
         env:
           CI: true
-      #      - name: Upload Test Coverage
-      #        uses: actions/upload-artifact@v1
-      #        with:
-      #          name: code-coverage
-      #          path: coverage
+      - name: Upload Test Coverage
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage
+          path: coverage
       - name: Build Project
         if: github.event_name == 'push'
         run: npm run build
-      #      - name: Upload Build Folder
-      #        if: github.event_name == 'push'
-      #        uses: actions/upload-artifact@v1
-      #        with:
-      #          name: build
-      #          path: build
-      #            - uses: actions/download-artifact # - only for example
+      - name: Upload Build Folder
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build
+#                  - uses: actions/download-artifact # - only for example
       - name: Deploy to Staging
         if: github.event_name == 'push'
         run: npx surge --project ./dist --domain tender-rail.surge.sh
