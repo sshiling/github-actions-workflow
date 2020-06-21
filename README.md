@@ -1,3 +1,5 @@
+![](https://github.com/sshiling/github-actions-workflow/workflows/CI/badge.svg?branch=dev&event=push)
+
 # github-actions-workflow
 
 ## Project setup
