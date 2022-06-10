@@ -33,7 +33,7 @@
     "cz-conventional-changelog": "^3.2.0",
     "husky": "^4.2.5",
     "prettier": "^1.19.1",
-    "semantic-release": "^17.0.8",
+    "semantic-release": "^19.0.3",
     "vue-template-compiler": "^2.6.11"
   },
   "config": {
